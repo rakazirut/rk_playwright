@@ -1,13 +1,13 @@
 version: 2
 
 jobs:
-  - playwright/run:
-      docker:
-        - image: mcr.microsoft.com/playwright:v1.21.0-focal
-      environment:
-        NODE_ENV: development # Needed if playwright is in `devDependencies`
-      steps:
-        - run:
-            command: npm install
-        - run: 
-            command: npx playwright test general.spec.ts
+  build:
+    docker:
+      - image: mcr.microsoft.com/playwright:v1.21.0-focal
+    environment:
+      NODE_ENV: development # Needed if playwright is in `devDependencies`
+    steps:
+      - run:
+          command: npm install
+      - run: 
+          command: npx playwright test general.spec.ts
