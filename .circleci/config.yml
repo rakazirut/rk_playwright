@@ -7,7 +7,6 @@ jobs:
       environment:
         NODE_ENV: development # Needed if playwright is in `devDependencies`
       steps:
-        - checkout
         - run:
             command: npm install
         - run: 
