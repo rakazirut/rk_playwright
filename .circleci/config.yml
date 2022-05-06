@@ -1,18 +1,14 @@
-version: 2.1
+version: 2
 
-workflows:
-  version: 2
-
-  commit-workflow:
-    jobs:
-      - playwright/run:
-          docker:
-            - image: mcr.microsoft.com/playwright:v1.21.0-focal
-          environment:
-            NODE_ENV: development # Needed if playwright is in `devDependencies`
-          steps:
-            - checkout
-            - run:
-                command: npm install
-            - run: 
-                command: npx playwright test general.spec.ts
+  jobs:
+    - playwright/run:
+        docker:
+          - image: mcr.microsoft.com/playwright:v1.21.0-focal
+        environment:
+          NODE_ENV: development # Needed if playwright is in `devDependencies`
+        steps:
+          - checkout
+          - run:
+              command: npm install
+          - run: 
+              command: npx playwright test general.spec.ts
