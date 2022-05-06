@@ -5,17 +5,12 @@ workflows:
     jobs:
       - playwright/run
 
-executors:
-  e2e:
+jobs:
+  playwright/run:
     docker:
       - image: mcr.microsoft.com/playwright:bionic
         environment:
           NODE_ENV: development # Needed if playwright is in `devDependencies`
-    working_directory: ~/workspace
-
-jobs:
-  playwright/run:
-    executor: e2e
     steps:
       - checkout
       - run: npm install
