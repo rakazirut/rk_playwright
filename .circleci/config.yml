@@ -8,9 +8,9 @@ workflows:
 executors:
   e2e:
     docker:
-      - image: mcr.microsoft.com/playwright:next
+      - image: mcr.microsoft.com/playwright:bionic
         environment:
-          NODE_ENV: development 
+          NODE_ENV: development # Needed if playwright is in `devDependencies`
     working_directory: ~/workspace
 
 jobs:
