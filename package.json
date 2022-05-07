@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "localRun": "npx playwright test --reporter=list",
+    "dockerRun": "docker-compose up playwright"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

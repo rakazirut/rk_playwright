@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  playwright:
+    image: mcr.microsoft.com/playwright:v1.21.0-focal
+    # entrypoint: /bin/sh
+    # user: root
+    container_name: playwright
+    command: npx playwright test --reporter=list
+    working_dir: /app
+    volumes:
+      - ./:/app
