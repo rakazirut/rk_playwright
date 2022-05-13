@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "localRun": "npx playwright test --reporter=list",
+    "localRun": "npx playwright test ./tests/swaglabs/login.spec.ts --reporter=list",
     "dockerRun": "docker-compose up playwright"
   },
   "keywords": [],
