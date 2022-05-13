@@ -10,5 +10,5 @@ Running using docker-compose
     - `docker-compose up playwright`
 3. (Optional) To run again without rebuilding the container
     - `docker-compose run playwright`
-4. (Optional) Afterwards to tear down containers used
+4. (Optional) Afterward to tear down containers used
     - `docker-compose down`
